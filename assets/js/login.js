@@ -29,7 +29,7 @@ $(function () {
             username: $('#form_reg [name=username]').val(),
             password: $('#form_reg [name=password]').val()
         }
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser', data, res => {
+        $.post('/api/reguser', data, res => {
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
